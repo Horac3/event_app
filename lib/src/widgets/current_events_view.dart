@@ -40,7 +40,7 @@ class CurrentEventView extends StatelessWidget {
             ),
             const Spacer(),
             VStack([
-              const Text("Stand Up").text.semiBold.make(),
+              const Text("Coding Hackathon").text.semiBold.make(),
               const Text("20-23 November").text.make()
             ],
             axisSize: MainAxisSize.max,)
@@ -55,7 +55,7 @@ class CurrentEventView extends StatelessWidget {
               width: context.percentWidth * 50,
               height: 30,
               backgroundColor: AppColors.yellow,
-              child: const Text("Happy Hour")
+              child: const Text("Happy Coding")
               .text
               .make()
               .px12()

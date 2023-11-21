@@ -1,4 +1,5 @@
 
+import 'package:event_booking/src/events/data/datasource/datasource.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -32,13 +33,25 @@ class HomePage extends StatelessWidget {
           ),
           //Upcoming Events
           Expanded(
-            child: ListView.builder(
-              itemCount: 10,
-              physics: const BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, int index) { 
-                return const UpComingEventsView().p24().h(context.percentHeight * 35);
-               },),
+            child: FutureBuilder(
+
+              future: DataSource.loadJsonData(),
+              builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                itemCount: 10,
+                physics: const BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (BuildContext context, int index) { 
+                  return const UpComingEventsView().p24().h(context.percentHeight * 35);
+                 },);
+                } else {
+                  return const Center(child: CircularProgressIndicator(),);
+                }
+                
+               },
+              
+            ),
           )
           ],
         ),

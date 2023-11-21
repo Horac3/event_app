@@ -1,0 +1,80 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "name": "Community Market Fair",
+        "type": "Market",
+        "date": "2023-12-01",
+        "location": "City Park",
+        "attendees": 500,
+        "image": "https://example.com/market-fair-image.jpg",
+        "vendors": [
+          {
+            "id": 101,
+            "name": "Handmade Crafts",
+            "business_type": "Artisan",
+            "products": ["Handmade Jewelry", "Wooden Decor"],
+            "image": "https://example.com/handmade-crafts-image.jpg"
+          },
+          {
+            "id": 102,
+            "name": "Local Delights",
+            "business_type": "Food",
+            "products": ["Organic Snacks", "Homemade Sweets"],
+            "image": "https://example.com/local-delights-image.jpg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Tech Expo",
+        "type": "Exhibition",
+        "date": "2023-12-10",
+        "location": "Convention Center",
+        "attendees": 800,
+        "image": "https://example.com/tech-expo-image.jpg",
+        "vendors": [
+          {
+            "id": 201,
+            "name": "Innovative Gadgets",
+            "business_type": "Technology",
+            "products": ["Smart Devices", "Virtual Reality Gear"],
+            "image": "https://example.com/innovative-gadgets-image.jpg"
+          },
+          {
+            "id": 202,
+            "name": "Coding Academy",
+            "business_type": "Education",
+            "products": ["Coding Courses", "Tech Workshops"],
+            "image": "https://example.com/coding-academy-image.jpg"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Culinary Festival",
+        "type": "Festival",
+        "date": "2023-12-20",
+        "location": "Downtown Square",
+        "attendees": 700,
+        "image": "https://example.com/culinary-festival-image.jpg",
+        "vendors": [
+          {
+            "id": 301,
+            "name": "Global Flavors",
+            "business_type": "Food",
+            "products": ["International Cuisine", "Food Tastings"],
+            "image": "https://example.com/global-flavors-image.jpg"
+          },
+          {
+            "id": 302,
+            "name": "Kitchen Essentials",
+            "business_type": "Retail",
+            "products": ["Cookware", "Gourmet Ingredients"],
+            "image": "https://example.com/kitchen-essentials-image.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  
