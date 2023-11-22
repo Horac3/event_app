@@ -1,101 +1,83 @@
-// To parse this JSON data, do
-//
-//     final eventsData = eventsDataFromJson(jsonString);
+class EventData {
+  List<Event> events;
 
-import 'dart:convert';
+  EventData({required this.events});
 
-EventsData eventsDataFromJson(String str) => EventsData.fromJson(json.decode(str));
-
-String eventsDataToJson(EventsData data) => json.encode(data.toJson());
-
-class EventsData {
-    List<Event> events;
-
-    EventsData({
-        required this.events,
-    });
-
-    factory EventsData.fromJson(Map<String, dynamic> json) => EventsData(
-        events: List<Event>.from(json["events"].map((x) => Event.fromJson(x))),
+  factory EventData.fromJson(Map<String, dynamic> json) {
+    List<Event> eventsList = List<Event>.from(
+      json["events"].map((eventJson) => Event.fromJson(eventJson)),
     );
 
-    Map<String, dynamic> toJson() => {
-        "events": List<dynamic>.from(events.map((x) => x.toJson())),
-    };
+    return EventData(events: eventsList);
+  }
 }
 
 class Event {
-    int id;
-    String name;
-    String type;
-    DateTime date;
-    String location;
-    int attendees;
-    String theme;
-    List<Vendor> vendors;
+  int id;
+  String name;
+  String type;
+  String date;
+  String location;
+  String description;
+  int attendees;
+  String image;
+  List<Vendor> vendors;
 
-    Event({
-        required this.id,
-        required this.name,
-        required this.type,
-        required this.date,
-        required this.location,
-        required this.attendees,
-        required this.theme,
-        required this.vendors,
-    });
+  Event({
+    required this.id,
+    required this.name,
+    required this.type,
+    required this.date,
+    required this.location,
+    required this.description,
+    required this.attendees,
+    required this.image,
+    required this.vendors,
+  });
 
-    factory Event.fromJson(Map<String, dynamic> json) => Event(
-        id: json["id"],
-        name: json["name"],
-        type: json["type"],
-        date: DateTime.parse(json["date"]),
-        location: json["location"],
-        attendees: json["attendees"],
-        theme: json["theme"],
-        vendors: List<Vendor>.from(json["vendors"].map((x) => Vendor.fromJson(x))),
+  factory Event.fromJson(Map<String, dynamic> json) {
+    List<Vendor> vendorsList = List<Vendor>.from(
+      json["vendors"].map((vendorJson) => Vendor.fromJson(vendorJson)),
     );
 
-    Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "type": type,
-        "date": "${date.year.toString().padLeft(4, '0')}-${date.month.toString().padLeft(2, '0')}-${date.day.toString().padLeft(2, '0')}",
-        "location": location,
-        "attendees": attendees,
-        "theme": theme,
-        "vendors": List<dynamic>.from(vendors.map((x) => x.toJson())),
-    };
+    return Event(
+      id: json["id"],
+      name: json["name"],
+      type: json["type"],
+      date: json["date"],
+      location: json["location"],
+      description: json['description'],
+      attendees: json["attendees"],
+      image: json["image"],
+      vendors: vendorsList,
+    );
+  }
 }
 
 class Vendor {
-    int id;
-    String name;
-    String businessType;
-    List<String> products;
-    String theme;
+  int id;
+  String name;
+  String businessType;
+  List<String> products;
+  String image;
 
-    Vendor({
-        required this.id,
-        required this.name,
-        required this.businessType,
-        required this.products,
-        required this.theme,
-    });
+  Vendor({
+    required this.id,
+    required this.name,
+    required this.businessType,
+    required this.products,
+    required this.image,
+  });
 
-    factory Vendor.fromJson(Map<String, dynamic> json) => Vendor(
-        id: json["id"],
-        name: json["name"],
-        businessType: json["business_type"],
-        products: List<String>.from(json["products"].map((x) => x)),
-        theme: json["theme"],
+  factory Vendor.fromJson(Map<String, dynamic> json) {
+    List<String> productsList = List<String>.from(json["products"]);
+
+    return Vendor(
+      id: json["id"],
+      name: json["name"],
+      businessType: json["business_type"],
+      products: productsList,
+      image: json["image"],
     );
-
-    Map<String, dynamic> toJson() => {
-        "id": id,
-        "name": name,
-        "business_type": businessType,
-        "products": List<dynamic>.from(products.map((x) => x)),
-        "theme": theme,
-    };
+  }
 }

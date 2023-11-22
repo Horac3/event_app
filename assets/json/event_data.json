@@ -6,22 +6,23 @@
         "type": "Market",
         "date": "2023-12-01",
         "location": "City Park",
+        "description" : "The Community Market Fair is a vibrant gathering at City Park, bringing together local artisans and food vendors to showcase their unique creations. With over 500 enthusiastic attendees, this market fair is a celebration of handmade crafts and delicious local delights. Visitors can explore a variety of products, from handmade jewelry and wooden decor to organic snacks and homemade sweets. The event fosters a sense of community, providing a platform for artisans and food entrepreneurs to connect with a diverse audience.",
         "attendees": 500,
-        "image": "https://example.com/market-fair-image.jpg",
+        "image": "assets/images/market-fair.jpg",
         "vendors": [
           {
             "id": 101,
             "name": "Handmade Crafts",
             "business_type": "Artisan",
             "products": ["Handmade Jewelry", "Wooden Decor"],
-            "image": "https://example.com/handmade-crafts-image.jpg"
+            "image": "assets/images/handmade-crafts.png"
           },
           {
             "id": 102,
             "name": "Local Delights",
             "business_type": "Food",
             "products": ["Organic Snacks", "Homemade Sweets"],
-            "image": "https://example.com/local-delights-image.jpg"
+            "image": "assets/images/local-delights.png"
           }
         ]
       },
@@ -31,22 +32,23 @@
         "type": "Exhibition",
         "date": "2023-12-10",
         "location": "Convention Center",
+        "description": "The Tech Expo is an exciting exhibition hosted at the Convention Center, dedicated to cutting-edge technology and innovation. Attendees, numbering around 800, have the opportunity to explore innovative gadgets and engage with technology-driven education at Coding Academy. The event features exhibitors such as Innovative Gadgets, showcasing smart devices and virtual reality gear. It's a must-attend for tech enthusiasts and those eager to stay at the forefront of technological advancements.",
         "attendees": 800,
-        "image": "https://example.com/tech-expo-image.jpg",
+        "image": "assets/images/tech-expo.jpg",
         "vendors": [
           {
             "id": 201,
             "name": "Innovative Gadgets",
             "business_type": "Technology",
             "products": ["Smart Devices", "Virtual Reality Gear"],
-            "image": "https://example.com/innovative-gadgets-image.jpg"
+            "image": "assets/images/innovative-gadgets.jpg"
           },
           {
             "id": 202,
             "name": "Coding Academy",
             "business_type": "Education",
             "products": ["Coding Courses", "Tech Workshops"],
-            "image": "https://example.com/coding-academy-image.jpg"
+            "image": "assets/images/coding-academy.jpg"
           }
         ]
       },
@@ -56,23 +58,108 @@
         "type": "Festival",
         "date": "2023-12-20",
         "location": "Downtown Square",
+        "description": "The Culinary Festival transforms Downtown Square into a gastronomic paradise, attracting 700 attendees who are passionate about global flavors and kitchen essentials. Food vendors like Global Flavors offer international cuisine and delightful food tastings, while Kitchen Essentials provides a range of cookware and gourmet ingredients. This festival is a celebration of diverse culinary experiences, bringing together food lovers and retailers in a lively atmosphere.",
         "attendees": 700,
-        "image": "https://example.com/culinary-festival-image.jpg",
+        "image": "assets/images/market-fair.jpg",
         "vendors": [
           {
             "id": 301,
             "name": "Global Flavors",
             "business_type": "Food",
             "products": ["International Cuisine", "Food Tastings"],
-            "image": "https://example.com/global-flavors-image.jpg"
+            "image": "assets/images/global-flavors.jpg"
           },
           {
             "id": 302,
             "name": "Kitchen Essentials",
             "business_type": "Retail",
             "products": ["Cookware", "Gourmet Ingredients"],
-            "image": "https://example.com/kitchen-essentials-image.jpg"
+            "image": "assets/images/kitchen-essential.jpg"
           }
+          
+        ]
+        
+      },
+
+      {
+        "id": 4,
+        "name": "Artisan Showcase",
+        "type": "Exhibition",
+        "date": "2023-12-05",
+        "location": "Art Gallery",
+        "description": "The Artisan Showcase at the Art Gallery is a haven for art enthusiasts, welcoming 300 attendees to explore the world of painted wonders and sculpture studios. Vendors like Painted Wonders offer canvas art and painted ceramics, while Sculpture Studios present metal sculptures and clay figurines. This exhibition is a testament to the creativity and skill of local artists, providing a platform for them to showcase their masterpieces.",
+        "attendees": 300,
+        "image": "assets/images/artisan-showcase.jpg",
+        "vendors": [
+          {
+            "id": 401,
+            "name": "Painted Wonders",
+            "business_type": "Art",
+            "products": ["Canvas Art", "Painted Ceramics"],
+            "image": "assets/images/painted-wonders.jpg"
+          },
+          {
+            "id": 402,
+            "name": "Sculpture Studios",
+            "business_type": "Sculpture",
+            "products": ["Metal Sculptures", "Clay Figurines"],
+            "image": "assets/images/sculpture-studio.jpg"
+          }
+          
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Tech Innovations Expo",
+        "type": "Exhibition",
+        "date": "2023-12-15",
+        "location": "Tech Hub",
+        "description": "The Tech Innovations Expo, held at the Tech Hub, is a dynamic exhibition attracting 600 attendees keen on exploring the future of technology. Exhibitors like Future Tech Solutions present AI solutions and robotics, while Virtual Reality World offers immersive VR games and experiences. This expo is a hub for tech enthusiasts, providing insights into groundbreaking innovations and emerging technologies.",
+        "attendees": 600,
+        "image": "assets/images/tech-expo.jpg",
+        "vendors": [
+          {
+            "id": 501,
+            "name": "Future Tech Solutions",
+            "business_type": "Technology",
+            "products": ["AI Solutions", "Robotics"],
+            "image": "assets/images/future-tech.jpg"
+          },
+          {
+            "id": 502,
+            "name": "Virtual Reality World",
+            "business_type": "Entertainment",
+            "products": ["VR Games", "Immersive Experiences"],
+            "image": "assets/images/virtual-reality.jpg"
+          }
+         
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Street Food Fiesta",
+        "type": "Food Festival",
+        "date": "2023-12-25",
+        "location": "Downtown",
+        "description": "The Street Food Fiesta in Downtown is a lively food festival, drawing 400 attendees to indulge in flavorful bites and sweet delicacies. Vendors like Flavorful Bites offer a diverse range of international street food, while Sweet Delicacies present artisanal desserts and sweet confections. This fiesta is a celebration of culinary delights from around the world, creating a festive and delicious atmosphere in the heart of the city.",
+        "attendees": 400,
+        "image": "assets/images/street-food.jpg",
+        "vendors": [
+          {
+            "id": 601,
+            "name": "Flavorful Bites",
+            "business_type": "Food",
+            "products": ["International Street Food", "Treats"],
+            "image": "assets/images/flavour-bites.jpg"
+          },
+          {
+            "id": 602,
+            "name": "Sweet Delicacies",
+            "business_type": "Desserts",
+            "products": ["Artisanal Desserts", "Sweet Confections"],
+            "image": "assets/images/sweet-delicacies.jpg"
+          }
+         
         ]
       }
     ]

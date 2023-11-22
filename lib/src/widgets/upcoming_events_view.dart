@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class UpComingEventsView extends StatefulWidget {
-  const UpComingEventsView({super.key});
+  final String eventName;
+  final String eventLocation;
+  final String eventImageURL;
+  final int attendees;
+  final String time;
+
+  const UpComingEventsView({super.key, required this.eventName, required this.eventLocation, required this.eventImageURL, required this.time, required this.attendees});
 
   @override
   State<UpComingEventsView> createState() => _UpComingEventsViewState();
@@ -17,27 +23,55 @@ class _UpComingEventsViewState extends State<UpComingEventsView> {
         children: [
           VxCapsule(
             backgroundColor: Vx.hexToColor("#c4ecd4"),
-            width: 90,
+            width: 100,
             height: 28,
             child: [
-              const Icon(Icons.phone_android).scale50(),
-              const Text("Date").text.xs.make(),
+              const Text('').scale50(),
+             
             ].hStack(),
           ).objectBottomRight(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               VxBox()
-                  .square(90)
-                  .bgImage(const DecorationImage(
-                      image: NetworkImage(""), fit: BoxFit.cover))
+                  .square(100)
+                  .bgImage(DecorationImage(
+                      image: AssetImage(widget.eventImageURL), fit: BoxFit.cover))
                   .rounded
                   .make(),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                
                 children: [
-                  const Text("Event Name").text.semiBold.make(),
-                  const Text("Event Description").text.sm.make()
+                  Text(widget.eventName).text.semiBold.make(),
+                  const SizedBox(width: 10,),
+                  const SizedBox(height: 5,),
+                  Row(
+                    children: [
+                      const Icon(Icons.location_on),
+                      const SizedBox(width: 10,),
+                      Text(widget.eventLocation).text.sm.make(),
+                    ],
+                  ),
+                  const SizedBox(height: 12,),
+                  Row(
+                    children: [
+                      const Icon(Icons.calendar_today),
+                      const SizedBox(width: 10,),
+                      Text(widget.time).text.sm.make(),
+                    ],
+                    
+                  ),
+                  const SizedBox(height: 12,),
+                  Row(
+                    
+                    children: [
+                      const Icon(Icons.people_alt_outlined),
+                      const SizedBox(width: 10,),
+                      Text(widget.attendees.toString()).text.sm.make(),
+                    ],
+                    
+                  )
                 ],
               ).pSymmetric(h: 16, v: 12)
             ],

@@ -1,8 +1,8 @@
 
 
-import '../data.dart';
+// import '../data.dart';
 
-abstract class DataRepository{
-  Future<EventsData> getEventsData();
+// abstract class DataRepository{
+//   Future<EventsData> getEventsData();
 
-}
+// }
