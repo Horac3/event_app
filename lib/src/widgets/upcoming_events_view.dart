@@ -1,4 +1,4 @@
-import 'package:event_booking/src/widgets/widgets.dart';
+import 'package:event_app/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -43,22 +43,22 @@ class _UpComingEventsViewState extends State<UpComingEventsView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 
                 children: [
-                  Text(widget.eventName).text.semiBold.make(),
+                  Text(widget.eventName).text.semiBold.color(Colors.black).make(),
                   const SizedBox(width: 10,),
                   const SizedBox(height: 5,),
                   Row(
                     children: [
-                      const Icon(Icons.location_on),
+                      const Icon(Icons.location_on, color: Colors.black,),
                       const SizedBox(width: 10,),
-                      Text(widget.eventLocation).text.sm.make(),
+                      Text(widget.eventLocation).text.sm.color(Colors.black).make(),
                     ],
                   ),
                   const SizedBox(height: 12,),
                   Row(
                     children: [
-                      const Icon(Icons.calendar_today),
+                      const Icon(Icons.calendar_today, color: Colors.black,),
                       const SizedBox(width: 10,),
-                      Text(widget.time).text.sm.make(),
+                      Text(widget.time).text.sm.color(Colors.black).make(),
                     ],
                     
                   ),
@@ -66,9 +66,9 @@ class _UpComingEventsViewState extends State<UpComingEventsView> {
                   Row(
                     
                     children: [
-                      const Icon(Icons.people_alt_outlined),
+                      const Icon(Icons.people_alt_outlined, color: Colors.black,),
                       const SizedBox(width: 10,),
-                      Text(widget.attendees.toString()).text.sm.make(),
+                      Text(widget.attendees.toString()).text.sm.color(Colors.black).make(),
                     ],
                     
                   )

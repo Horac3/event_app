@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:event_booking/src/events/data/data.dart';
+import 'package:event_app/src/events/data/data.dart';
 import 'package:flutter/services.dart';
 
 

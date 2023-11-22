@@ -27,7 +27,7 @@ class BackArrow extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25)
             ),
-            child: const Icon(Icons.arrow_back_ios_new, size: 20, color: Colors.black,))),
+            child: const Icon(Icons.arrow_back_ios_new, size: 20, color: Colors.white,))),
           ),
       ),
     );

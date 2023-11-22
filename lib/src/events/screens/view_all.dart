@@ -1,3 +1,4 @@
+import 'package:event_app/src/events/screens/event_details.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -26,7 +27,12 @@ class ViewAll extends StatelessWidget {
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
               
-              return UpComingEventsView(eventName: data[index].name, eventLocation: data[index].location, eventImageURL: data[index].image, time: data[index].date, attendees: data[index].attendees,).p20().h(context.percentHeight * 38);
+              return InkWell(
+                onTap: (){
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=> EventDetail(id: data[index].id, name: data[index].name, type: data[index].type, date: data[index].date, location: data[index].location, description: data[index].description, attendees: data[index].attendees, image: data[index].image, vendors: data[index].vendors,) ));
+
+                },
+                child: UpComingEventsView(eventName: data[index].name, eventLocation: data[index].location, eventImageURL: data[index].image, time: data[index].date, attendees: data[index].attendees,).p20().h(context.percentHeight * 38));
              },);
             } else {
               return const Center(child: CircularProgressIndicator(),);

@@ -1,4 +1,4 @@
-# event_booking
+# event_app
 
 A new Flutter project.
 

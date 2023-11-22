@@ -1,7 +1,7 @@
 
-import 'package:event_booking/src/events/screens/bookmark.dart';
-import 'package:event_booking/src/events/screens/register_form.dart';
-import 'package:event_booking/src/widgets/widgets.dart';
+import 'package:event_app/src/events/screens/bookmark.dart';
+import 'package:event_app/src/events/screens/register_form.dart';
+import 'package:event_app/src/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../constants/constants.dart';

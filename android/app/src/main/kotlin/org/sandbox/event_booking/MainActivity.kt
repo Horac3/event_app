@@ -1,4 +1,4 @@
-package org.sandbox.event_booking
+package org.sandbox.event_app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -10,7 +10,7 @@ class BookMarkedEvents extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Vx.hexToColor("#e8eddb"),
         body: const Center(
-          child: Text('No Current Bookmarks'),
+          child: Text('No Current Bookmarks', style: TextStyle(color: Colors.black, fontSize: 20),),
         ),
       ));
   }

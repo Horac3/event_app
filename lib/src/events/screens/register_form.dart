@@ -1,4 +1,4 @@
-import 'package:event_booking/src/constants/constants.dart';
+import 'package:event_app/src/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -28,6 +28,7 @@ class _EventRegistrationFormState extends State<EventRegistrationForm> {
             TextField(
               controller: nameController,
               decoration: const InputDecoration(
+                hintStyle: TextStyle(color: Colors.black),
                 hintText: 'Event Name',
               ),
             ),
@@ -35,6 +36,7 @@ class _EventRegistrationFormState extends State<EventRegistrationForm> {
             TextField(
               controller: typeController,
               decoration: const InputDecoration(
+                hintStyle: TextStyle(color: Colors.black),
                 hintText: 'Event Type',
               ),
             ),
@@ -42,6 +44,7 @@ class _EventRegistrationFormState extends State<EventRegistrationForm> {
             TextField(
               controller: dateController,
               decoration: const InputDecoration(
+                hintStyle: TextStyle(color: Colors.black),
                 hintText: 'Event Date (YYYY-MM-DD)',
               ),
             ),
@@ -49,6 +52,7 @@ class _EventRegistrationFormState extends State<EventRegistrationForm> {
             TextField(
               controller: locationController,
               decoration: const InputDecoration(
+                hintStyle: TextStyle(color: Colors.black),
                 hintText: 'Event Location',
               ),
             ),

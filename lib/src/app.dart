@@ -1,4 +1,4 @@
-import 'package:event_booking/src/home/home_page.dart';
+import 'package:event_app/src/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 
